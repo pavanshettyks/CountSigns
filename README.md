@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `npm init react-app count-signs`
+
 In the project directory, you can run:
 
 ### `npm start`
