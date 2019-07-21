@@ -1,27 +1,26 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
-export default class AddSigns extends Component {
-    state ={
-        title:''
-    }
+class AddSigns extends Component {
+
     onSubmit = (e) => {
+        
         e.preventDefault();
-        if(this.state.title !== ''){
-            this.props.addSigns(this.state.title)
+        if(this.props.title !== ''){
+            this.props.addNewSigns(this.props.title)      
+            this.props.changeText('')  
        }
-       this.props.filterValue('');
-        this.setState( {title: '' });
+
         
     }
     onChange =(e) => {
-        this.setState({ [e.target.name]: e.target.value.toUpperCase()})
-        this.props.filterValue(e.target.value.toUpperCase());
+        this.props.changeText(e.target.value.toUpperCase())
     }
   render(){
     return (
         <form style ={{display:'flex', padding: '5px'}} onSubmit = {this.onSubmit} > 
                 <input type='input' placeholder ='Type Sign Name' onChange={this.onChange}
-                name ='title' value = {this.state.title} style ={{flex:5}}/>
+                name ='title' value = {this.props.title} style ={{flex:5}}/>
                 <input type="submit" value= "Add / update Signs" className = "btn" style={{flex:'2'}} />
                 
         </form>
@@ -29,3 +28,17 @@ export default class AddSigns extends Component {
     )
  }
 }
+const mapStateToProps = state => {
+    return{
+            title: state.title,
+    }
+}
+
+const mapDispatchToProps = dispatcher => {
+    return{
+        changeText: (text) => dispatcher({type: 'changeText', title:text}),
+        addNewSigns: (text) => dispatcher({type: 'addNewSigns', title:text})
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(AddSigns)

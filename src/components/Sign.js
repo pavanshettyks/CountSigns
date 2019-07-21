@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 export default class Sign extends Component {
 
@@ -6,6 +7,7 @@ export default class Sign extends Component {
        // console.log(this.props.sign.count)
         this.props.incrementCount(this.props.sign.id);
     }
+
     decrementCount = (e) => {
         this.props.decrementCount(this.props.sign.id);
        // this.props.decrementCount(e.sign.id);
@@ -26,3 +28,14 @@ export default class Sign extends Component {
         )
     }
 }
+
+/*
+const mapDispatchToProps = dispatcher => {
+    return{
+        incrementCount: (id) => dispatcher({type: 'incrementCount', id:id}),
+        decrementCount: (id) => dispatcher({type: 'decrementCount', id:id})
+    }
+}
+
+export default connect(null,mapDispatchToProps)(Sign)
+*/

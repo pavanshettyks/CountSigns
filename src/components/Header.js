@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { connect } from 'react-redux'
 
 function Header(props){
   return (
@@ -10,6 +10,15 @@ function Header(props){
     </header>
   )
 }
+const mapStateToProps = state => {
+  return {
+    Count: state.Count,
+  }
+}
+
+export default connect(
+  mapStateToProps,
+)(Header)
 
 
 
@@ -19,5 +28,3 @@ const headerStyle = {
   textAlign: 'center',
   padding: '5px'
 }
-
-export default Header
