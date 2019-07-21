@@ -12,12 +12,22 @@ export default class Sign extends Component {
         this.props.decrementCount(this.props.sign.id);
        // this.props.decrementCount(e.sign.id);
     }
+    deleteSign = (e) => {
+        this.props.deleteSign(this.props.sign.id);
+       // this.props.decrementCount(e.sign.id);
+    }
+
     render() {
         return (
         <div style ={{padding:'5px',display:'flex'}}>
+            <div style ={{flex:2}}>
+                    <button style = {{padding:'5px',marginRight:7,marginLeft:7}}
+                            onClick = {this.deleteSign}
+                    > x </button>  
+            </div>
             <div style ={{flex:5}}>{this.props.sign.name}</div>
             <div style ={{flex:2}}>
-                    <button style ={{padding:'5px', marginRight:7}} onClick = {this.incrementCount}> + </button>
+                    <button style ={{padding:'5px'}} onClick = {this.incrementCount}> + </button>
                     {this.props.sign.count}
                     <button style = {{padding:'5px',marginRight:7,marginLeft:7}}
                             onClick = {this.decrementCount}

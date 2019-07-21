@@ -1,17 +1,18 @@
 import initialState from './initialState'
+import uuid from 'uuid';
 
 const MainReducer = (state = initialState, action) => {
     switch (action.type) {
 
     case 'changeText':
-        console.log(action);
+       // console.log(action);
         return { ...state, title: action.title }
 
     case 'addNewSigns':
         let new_sign = { 
             name :action.title,
             count: 1,
-            id : 4
+            id :  uuid.v4()
          }
         let update_sign = state.signs.filter((signs)=> signs.name === action.title )
         if(!update_sign.length){
@@ -30,7 +31,16 @@ const MainReducer = (state = initialState, action) => {
             
             return { ...state,signs:updated_signs, Count:state.Count+1 }
         }
-        
+
+    case 'deleteSign':
+            let delete_signs = state.signs.filter((sign)=>(
+                    action.id !== sign.id )
+                     
+                )
+                //console.log(updated_signs)
+                
+        return { ...state,signs:delete_signs }
+                 
 
     case 'incrementCount':
         let updated_signs = state.signs.map((sign)=>{
