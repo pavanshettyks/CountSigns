@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/count-signs/static/css/main.db4f72fa.chunk.css",
-    "main.js": "/count-signs/static/js/main.06616804.chunk.js",
-    "main.js.map": "/count-signs/static/js/main.06616804.chunk.js.map",
+    "main.js": "/count-signs/static/js/main.3c0963b4.chunk.js",
+    "main.js.map": "/count-signs/static/js/main.3c0963b4.chunk.js.map",
     "runtime~main.js": "/count-signs/static/js/runtime~main.85ca7c77.js",
     "runtime~main.js.map": "/count-signs/static/js/runtime~main.85ca7c77.js.map",
     "static/js/2.74b2ff95.chunk.js": "/count-signs/static/js/2.74b2ff95.chunk.js",
     "static/js/2.74b2ff95.chunk.js.map": "/count-signs/static/js/2.74b2ff95.chunk.js.map",
     "index.html": "/count-signs/index.html",
-    "precache-manifest.bcd01247e84722de205dbb3dda87c67a.js": "/count-signs/precache-manifest.bcd01247e84722de205dbb3dda87c67a.js",
+    "precache-manifest.ea4e46dab1a4be81719969ebe882ee94.js": "/count-signs/precache-manifest.ea4e46dab1a4be81719969ebe882ee94.js",
     "service-worker.js": "/count-signs/service-worker.js",
     "static/css/main.db4f72fa.chunk.css.map": "/count-signs/static/css/main.db4f72fa.chunk.css.map"
   }
