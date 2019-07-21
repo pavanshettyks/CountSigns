@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+
+import './Sign.css';
 
 export default class Sign extends Component {
 
@@ -20,16 +21,16 @@ export default class Sign extends Component {
     render() {
         return (
         <div style ={{padding:'5px',display:'flex'}}>
-            <div style ={{flex:2}}>
-                    <button style = {{padding:'5px',marginRight:7,marginLeft:7}}
+            <div style ={{flex:1,}} id='delete'>
+                    <button style ={btnStyle}
                             onClick = {this.deleteSign}
                     > x </button>  
             </div>
             <div style ={{flex:5}}>{this.props.sign.name}</div>
-            <div style ={{flex:2}}>
-                    <button style ={{padding:'5px'}} onClick = {this.incrementCount}> + </button>
+            <div style ={{flex:2}} id='delete'>
+                    <button style ={{padding:'5px',marginRight:'10px'}} onClick = {this.incrementCount}> + </button>
                     {this.props.sign.count}
-                    <button style = {{padding:'5px',marginRight:7,marginLeft:7}}
+                    <button style = {{padding:'5px',marginRight:'5px',marginLeft:'10px'}}
                             onClick = {this.decrementCount}
                     > - </button>
             </div>
@@ -49,3 +50,14 @@ const mapDispatchToProps = dispatcher => {
 
 export default connect(null,mapDispatchToProps)(Sign)
 */
+
+const btnStyle = {
+    background: '#ff0000',
+    color: '#fff',
+    border: 'none',
+    marginRight:'15px',
+    padding: '5px 9px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    float: 'right'
+  }
