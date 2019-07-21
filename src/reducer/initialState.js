@@ -2,6 +2,7 @@ const initialState = {
     Value: '',
     title:'',
     Count: 14,
+    CategoriesCount: 3,
     signs : [ 
       {
         name:"EVENT PARKING",

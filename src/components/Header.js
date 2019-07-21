@@ -5,7 +5,7 @@ function Header(props){
   return (
     <header style={headerStyle}>
       <h1>Signs Inventory </h1>
-      <h4>Total Signs: {props.Count}</h4>
+      <h4>Total Signs: {props.Count} | Categories: {props.CategoriesCount} </h4>
       
     </header>
   )
@@ -13,6 +13,7 @@ function Header(props){
 const mapStateToProps = state => {
   return {
     Count: state.Count,
+    CategoriesCount:state.CategoriesCount
   }
 }
 

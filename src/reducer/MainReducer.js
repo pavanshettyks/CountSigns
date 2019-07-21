@@ -17,7 +17,7 @@ const MainReducer = (state = initialState, action) => {
         let update_sign = state.signs.filter((signs)=> signs.name === action.title )
         if(!update_sign.length){
                 //  setState({signs:[...this.state.signs,new_sign], Count:this.state.Count+1})
-                  return { ...state,signs:[...state.signs,new_sign],Count:state.Count+1,  }
+                  return { ...state,signs:[...state.signs,new_sign],Count:state.Count+1,  CategoriesCount: state.CategoriesCount+ 1  }
         }
         else{
             let updated_signs = state.signs.map((sign)=>{
@@ -39,7 +39,7 @@ const MainReducer = (state = initialState, action) => {
                 )
                 //console.log(updated_signs)
                 
-        return { ...state,signs:delete_signs }
+        return { ...state,signs:delete_signs , Count:state.Count-action.count,CategoriesCount: state.CategoriesCount-1 }
                  
 
     case 'incrementCount':

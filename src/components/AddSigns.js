@@ -18,7 +18,7 @@ class AddSigns extends Component {
     }
   render(){
     return (
-        <form style ={{display:'flex', padding: '5px'}} onSubmit = {this.onSubmit} > 
+        <form style ={{display:'flex', padding: '7px',height:'45px'}} onSubmit = {this.onSubmit} > 
                 <input type='input' placeholder ='Type Sign Name' onChange={this.onChange}
                 name ='title' value = {this.props.title} style ={{flex:5}}/>
                 <input type="submit" value= "Add / update Signs" className = "btn" style={{flex:'2'}} />

@@ -14,7 +14,7 @@ export default class Sign extends Component {
        // this.props.decrementCount(e.sign.id);
     }
     deleteSign = (e) => {
-        this.props.deleteSign(this.props.sign.id);
+        this.props.deleteSign(this.props.sign.id,this.props.sign.count);
        // this.props.decrementCount(e.sign.id);
     }
 

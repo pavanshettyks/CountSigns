@@ -10,10 +10,10 @@ class Allsigns extends Component {
     decrementCount = (id) =>{
         this.props.decrementCount(id)
     }
-    deleteSign = (id) =>{
+    deleteSign = (id,count) =>{
         const confirmation = window.confirm("This will permanently delete the entry. \n Are you sure?");
         if(confirmation){
-                this.props.deleteSign(id)
+                this.props.deleteSign(id,count)
         }
     }
 
@@ -41,7 +41,7 @@ const mapDispatchToProps = dispatcher => {
     return{
         incrementCount: (id) => dispatcher({type: 'incrementCount', id:id}),
         decrementCount: (id) => dispatcher({type: 'decrementCount', id:id}),
-        deleteSign: (id) =>      dispatcher({type: 'deleteSign', id:id})
+        deleteSign: (id,count) =>      dispatcher({type: 'deleteSign', id:id,count:count})
     }
 }
 
