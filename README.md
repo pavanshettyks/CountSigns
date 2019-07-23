@@ -28,3 +28,20 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+#####################################################
+
+https://codepen.io/iamrewt/pen/WYbPWN implement this and then
+window.print()
+
+https://dusty.phillips.codes/2018/08/25/react-redux-firebase-with-firestore-tutorial/  --> for firebase
+
+https://medium.com/quick-code/how-to-integrate-react-redux-and-firebase-in-3-simple-steps-c44804a6af38
+
+https://medium.com/@olamilekan001/getting-started-with-react-redux-and-firestore-44d085c43bc6
+
+https://react-redux-firebase.com/docs/getting_started.html
+
+http://docs.react-redux-firebase.com/history/v3.0.0/docs/firestore.html
+
+https://www.freecodecamp.org/news/how-to-connect-a-react-design-system-with-firebase-and-redux-9646ca1c733f/

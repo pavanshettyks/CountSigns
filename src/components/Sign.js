@@ -6,11 +6,11 @@ export default class Sign extends Component {
 
     incrementCount = (e) => {
        // console.log(this.props.sign.count)
-        this.props.incrementCount(this.props.sign.id);
+        this.props.incrementCount(this.props.sign.id,this.props.sign.count);
     }
 
     decrementCount = (e) => {
-        this.props.decrementCount(this.props.sign.id);
+        this.props.decrementCount(this.props.sign.id,this.props.sign.count);
        // this.props.decrementCount(e.sign.id);
     }
     deleteSign = (e) => {

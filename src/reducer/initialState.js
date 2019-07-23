@@ -1,25 +1,29 @@
-const initialState = {
-    Value: '',
-    title:'',
-    Count: 14,
-    CategoriesCount: 3,
-    signs : [ 
-      {
-        name:"EVENT PARKING",
-        count:8,
-        id:1
-      },
-      {
-        name:"EVENT PARKING RIGHT",
-        count:1,
-        id:2
-      },
-      {
-        name:"EVENT PARKING LEFT",
-        count:5,
-        id:3
-      }
-    ] 
-  } 
+//import {getSigns} from '../firebase/firebase'
+
+
+  const initialState = {        
+                Value: '',
+                title:'', 
+                Count:14,
+                CategoriesCount:3,
+                signs : [ 
+                  {
+                    name:"EVENT PARKING",
+                    count:8,
+                    id:1
+                  },
+                  {
+                    name:"EVENT PARKING RIGHT",
+                    count:1,
+                    id:2
+                  },
+                  {
+                    name:"EVENT PARKING LEFT",
+                    count:5,
+                    id:3
+                  }
+                ],
+
+          }
   
   export default initialState;

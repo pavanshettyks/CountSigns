@@ -1,6 +1,9 @@
 import React from 'react';
 import Main from './components/Main'
-import store from './reducer/store'
+//import store from './reducer/store'
+
+import store from "./firebase-redux/store"
+
 import { Provider } from 'react-redux';
 
 

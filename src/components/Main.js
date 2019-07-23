@@ -13,7 +13,7 @@ class Main extends Component {
           <AddSigns />
           <AllSigns />
             
-
+          { /* */}
         </div>
       );
   }

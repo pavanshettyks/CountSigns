@@ -1,6 +1,5 @@
-import initialState from './initialState'
+import initialState from '../reducer/initialState'
 import uuid from 'uuid';
-//import {UpdateSign} from '../firebase/firebase'
 
 
 const MainReducer = (state = initialState, action) => {
@@ -8,7 +7,7 @@ const MainReducer = (state = initialState, action) => {
 
     case 'changeText':
        // console.log(action);
-
+       
         return { ...state, title: action.title }
 
     case 'addNewSigns':

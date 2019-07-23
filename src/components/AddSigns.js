@@ -1,19 +1,49 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import uuid from 'uuid';
+import { firestoreConnect } from 'react-redux-firebase'
+import { compose } from 'redux'
 
 class AddSigns extends Component {
 
     onSubmit = (e) => {
         
         e.preventDefault();
+        //console.log("ddd",this.props.title)
         if(this.props.title !== ''){
-            this.props.addNewSigns(this.props.title)      
+          //  this.props.addNewSigns(this.props.title)  
+           // let data = this.props.title ;
+            //console.log(this.props.title)
+             let new_id = uuid.v4();
+             console.log(new_id)
+              this.props.firestore.add(
+                { collection: 'allSigns',
+                 //doc:'ssss'
+                },
+                {
+                 
+                  name: this.props.title,
+                  count:1,
+                  //id: new_id
+                }
+              ) ;
+
+              this.props.firestore.update(
+                { collection: 'Counts',
+                  doc:'all' },
+                {
+                  Count:  this.props.count+1,
+                  CategoriesCount:  this.props.CategoriesCount+1,
+
+                }
+              )
             this.props.changeText('')  
        }
 
         
     }
     onChange =(e) => {
+        
         this.props.changeText(e.target.value.toUpperCase())
     }
   render(){
@@ -29,8 +59,17 @@ class AddSigns extends Component {
  }
 }
 const mapStateToProps = state => {
+    let count = 0;
+    let categoriesCount = 0;
+   if(state.firestore.ordered.Counts != null ){
+    count = state.firestore.ordered.Counts[0].Count;
+    categoriesCount = state.firestore.ordered.Counts[0].CategoriesCount;
+   }
     return{
-            title: state.title,
+        count: count,
+        CategoriesCount : categoriesCount,
+            title: state.local.title,
+            
     }
 }
 
@@ -41,4 +80,13 @@ const mapDispatchToProps = dispatcher => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(AddSigns)
+export default compose(connect(mapStateToProps,mapDispatchToProps),firestoreConnect(
+    (props) => {
+        return [
+          {
+            collection: 'Counts',
+            doc:'all'
+          }
+        ]
+      }
+))(AddSigns)
