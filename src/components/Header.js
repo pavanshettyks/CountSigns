@@ -9,7 +9,7 @@ function Header(props){
  
   return (
     <header style={headerStyle}>
-      <h1>Signs Inventory </h1>
+      <h1>Signs Inventory dxfghjk </h1>
       <h4>Total Signs:  {props.Count} | Categories: { props.CategoriesCount} </h4>
       <button onClick = {() => { window.print()
     }}>Print</button>
