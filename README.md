@@ -42,6 +42,4 @@ https://medium.com/@olamilekan001/getting-started-with-react-redux-and-firestore
 
 https://react-redux-firebase.com/docs/getting_started.html
 
-http://docs.react-redux-firebase.com/history/v3.0.0/docs/firestore.html
-
 https://www.freecodecamp.org/news/how-to-connect-a-react-design-system-with-firebase-and-redux-9646ca1c733f/
